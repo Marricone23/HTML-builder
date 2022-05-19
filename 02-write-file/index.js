@@ -1,10 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-/*const { stdin, stdout } = process;
-stdin.on('data', data => stdout.write(data));*/
-
-const { stdin } = process;
+const { stdin, stdout } = process;
 
 fs.writeFile(
     path.join(__dirname,'newtext.txt'),
@@ -17,35 +14,17 @@ fs.writeFile(
 
 stdin.on('data', data => fs.appendFile(
     path.join(__dirname, 'newtext.txt'), 
-    data,   
+    data,          
     (err) => {
-        if (err) throw err;
-        console.log('Файл был создан'); 
-          
+        if (err) throw err;        
     },
-    (data) => {
-        if( data == 'exit'){
-            console.log('Пока!Пока!');
-            process.exit();        
-        }
-       
-    }
-
+        
 ));
 
 
-/*function exit(){
-    if( data == 'exit'){
-        console.log('Пока!Пока!');
-        process.exit();        
-    }
-  
-}*/
-
-
-
-
-    
+process.on('SIGINT', () => stdout.write('Удачи в изучении Node.js!'));
+process.on('SIGINT', () => process.exit());
+//process.exit()//process.exit();    
 
 
 

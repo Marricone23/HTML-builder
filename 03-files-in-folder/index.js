@@ -21,7 +21,18 @@ const files = fs.readdirSync(dirPath, {withFileTypes: true})
 
 console.log(files.join('\n'));
 
-const stat = fs.statSync(dirPath, function(err, stats) {
-    console.log(stat);
-    console.log(stats["size"]);
-});
+/*const stat = fs.statSync(dirPath);
+console.log(stat.isDirectory());
+console.log("Path is file:", stat.isFile());*/
+
+files.forEach(file => {fs.stat(dirPath, (error, stats) => {
+    if (error) {
+      console.log(error);
+    }
+    else {
+      console.log(stats);
+      console.log("Path is file:", stats.isFile());
+      console.log("Path is directory:", stats.isDirectory());
+    }
+  });
+})

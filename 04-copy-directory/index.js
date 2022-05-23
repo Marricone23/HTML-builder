@@ -2,22 +2,6 @@ let fs = require('fs');
 const path = require('path');
 const dirPath = 'C:\\Users\\a.asouski\\Desktop\\HTML-builder-1\\04-copy-directory\\files\\';
 
-/*function folder (){
-   try {
-      if (!fs.existsSync(dirPath))
-        fs.mkdir('04-copy-directory/files-copy', (err) => {
-         if (err) throw err;// папка уже существует
-      
-    });
-   }catch (err) {
-     console.error(err);
-    }
-}
-
-folder();*/
-
-
-/**/
 
 fs.mkdir('04-copy-directory/files-copy', { recursive: true }, (err) => {
    if (err) throw err;// папка уже существует
@@ -33,7 +17,6 @@ fs.readdir( dirPath, (err, files) => {
    console.log('В папке находятся файлы:' + files);
 
 });
-
 
 //let { COPYFILE_EXCL } = fs.constants;
 fs.copyFile(dirPath + 'test-css.css', '04-copy-directory/files-copy/test-css-copy.css',err => {

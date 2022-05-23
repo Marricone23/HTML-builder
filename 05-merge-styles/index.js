@@ -33,17 +33,30 @@ var array2 = fs.readFileSync(dirPath + 'style-2.css','utf8').toString().split();
 console.log(array2);
 var array3 = fs.readFileSync(dirPath + 'style-3.css', 'utf8').toString().split();
 console.log(array3);
+/*
+fs.readFile(dirPath + 'style-1.css', function(err, data) {
+    if(err) throw err;
+    var array1 = data.toString().split();
+    for(i in array1) {
+        console.log(array1[i]);
+    }
+});
+fs.readFile(dirPath + 'style-2.css', function(err, data) {
+    if(err) throw err;
+    var array2 = data.toString().split();
+    for(i in array2) {
+        console.log(array2[i]);
+    }
+});
+fs.readFile(dirPath + 'style-3.css', function(err, data) {
+    if(err) throw err;
+    var array3 = data.toString().split();
+    for(i in array3) {
+        console.log(array3[i]);
+    }
+});
+*/
 
-/*var newArr = function(){
- fs.readFile(dirPath + 'style-1.css', 'utf8').toString().split();
-console.log(array1);
- fs.readFile(dirPath + 'style-2.css','utf8').toString().split();
-console.log(array2);
- fs.readFile(dirPath + 'style-3.css', 'utf8').toString().split();
-console.log(array3);
-}*/
-
-//fs.writeFile("bundle.css");
 
 var newArray = array1 + array2 + array3; 
 

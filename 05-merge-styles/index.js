@@ -34,6 +34,15 @@ console.log(array2);
 var array3 = fs.readFileSync(dirPath + 'style-3.css', 'utf8').toString().split();
 console.log(array3);
 
+/*var newArr = function(){
+ fs.readFile(dirPath + 'style-1.css', 'utf8').toString().split();
+console.log(array1);
+ fs.readFile(dirPath + 'style-2.css','utf8').toString().split();
+console.log(array2);
+ fs.readFile(dirPath + 'style-3.css', 'utf8').toString().split();
+console.log(array3);
+}*/
+
 //fs.writeFile("bundle.css");
 
 var newArray = array1 + array2 + array3; 

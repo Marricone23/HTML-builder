@@ -11,7 +11,7 @@ fs.readdir(dir);*/
 const fs = require('fs')
 const path = require('path')
 
-const dirPath = 'C:\\Users\\marri\\Desktop\\HTML-builder\\03-files-in-folder\\secret-folder\\';
+const dirPath = 'C:\\Users\\a.asouski\\Desktop\\HTML-builder-1\\03-files-in-folder\\secret-folder\\';
 const filess = fs.readdirSync(dirPath).map(fileName => `${dirPath}\\${fileName}`);
 console.log(filess.join('\n'));
 

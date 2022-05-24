@@ -14,6 +14,18 @@ fs.mkdir('06-build-page/project-dist/assets', { recursive: true }, (err) => {
     if (err) throw err;// папка уже существует
     console.log('папка была создана')
  });
+fs.mkdir('06-build-page/project-dist/assets/fonts', { recursive: true }, (err) => {
+    if (err) throw err;// папка уже существует
+    console.log('папка была создана')
+ });
+fs.mkdir('06-build-page/project-dist/assets/img', { recursive: true }, (err) => {
+    if (err) throw err;// папка уже существует
+    console.log('папка была создана')
+ });
+fs.mkdir('06-build-page/project-dist/assets/svg', { recursive: true }, (err) => {
+    if (err) throw err;// папка уже существует
+    console.log('папка была создана')
+ });
 
 fs.writeFile(dirPathNew + "style.css", "",function(error){
     if(error) {
@@ -27,3 +39,21 @@ fs.writeFile(dirPathNew + "index.html", "", function(error){
     }; 
 });
 
+
+fs.copyFile(dirPathAssets +'/fonts/' + 'Karolina-Regular.woff2', '06-build-page/project-dist/assets/fonts/Karolina-Regular.woff2',err => {
+    if(err) throw err; // не удалось скопировать файл
+    console.log('Файл успешно скопирован');
+ });/*
+ fs.copyFile(dirPath + 'test-image.jpg', '04-copy-directory/files-copy/test-image-copy.jpg',err => {
+    if(err) throw err; // не удалось скопировать файл
+    console.log('Файл успешно скопирован');
+ });
+ fs.copyFile(dirPath + 'test-js.js', '04-copy-directory/files-copy/test-js-copy.js',err => {
+    if(err) throw err; // не удалось скопировать файл
+    console.log('Файл успешно скопирован');
+ });
+ fs.copyFile(dirPath + 'test-text.txt', '04-copy-directory/files-copy/test-text-copy.txt',err => {
+    if(err) throw err; // не удалось скопировать файл
+    console.log('Файл успешно скопирован');
+ });*/
+ 

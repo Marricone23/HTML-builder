@@ -48,18 +48,6 @@ fs.copyFile(dirPathAssets +'/fonts/' + 'Karolina-Regular.woff2', '06-build-page/
     console.log('Файл успешно скопирован');
  });
 
-
-/*function copyFolderSync(dirPathAssetsImg, to ) {
-    fs.readdirSync(dirPathAssetsImg).forEach(element => {
-        if (fs.lstatSync(path.join(dirPathAssetsImg, element)).isFile()) {
-            fs.copyFileSync(path.join(dirPathAssetsImg, element), path.join(to, element));
-        } else {
-            copyFolderSync(path.join(dirPathAssetsImg, element), path.join(to, element));
-        }
-    });
-}
-copyFolderSync(dirPathAssetsImg, to);*/
-
 function copyFolderSync(dirPathAssetsImg, to ) {
     fs.readdir(dirPathAssetsImg,( err,files ) => 
     files.forEach(element => {
@@ -79,17 +67,6 @@ function copyFolderSync(dirPathAssetsImg, to ) {
 );  
 }
 copyFolderSync(dirPathAssetsImg, to);
-
-/*function copyFolderSvg(dirPathAssetsSvg, toDirPathAssetsSvg ) {
-    fs.readdirSync(dirPathAssetsSvg).forEach(element => {
-        if (fs.lstatSync(path.join(dirPathAssetsSvg, element)).isFile()) {
-            fs.copyFileSync(path.join(dirPathAssetsSvg, element), path.join(toDirPathAssetsSvg, element));
-        } else {
-            copyFolderSync(path.join(dirPathAssetsSvg, element), path.join(toDirPathAssetsSvg, element));
-        }
-    });
-}
-copyFolderSvg(dirPathAssetsSvg, toDirPathAssetsSvg);*/
 
 
 function copyFolderSvg(dirPathAssetsSvg, toDirPathAssetsSvg ) {

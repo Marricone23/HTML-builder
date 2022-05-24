@@ -33,6 +33,22 @@ var array2 = fs.readFileSync(dirPath + 'style-2.css','utf8').toString().split();
 console.log(array2);
 var array3 = fs.readFileSync(dirPath + 'style-3.css', 'utf8').toString().split();
 console.log(array3);
+
+/* function Newarr () {
+    fs.readFile(dirPath, err, files =>{
+        files.forEach((element)=>{
+            var array = element.toString().split();
+            for(i in array) {
+                console.log(array[i]);
+            }
+            if(err) throw err;
+            console.log("ehhhhfff")
+        })
+        
+    })
+}
+
+Newarr ()*/
 /*
 fs.readFile(dirPath + 'style-1.css', function(err, data) {
     if(err) throw err;

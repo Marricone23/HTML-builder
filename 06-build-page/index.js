@@ -63,7 +63,7 @@ copyFolderSync(dirPathAssetsImg, to);*/
 function copyFolderSync(dirPathAssetsImg, to ) {
     fs.readdir(dirPathAssetsImg,( err,files ) => 
     files.forEach(element => {
-        if (fs.lstatSync(path.join(dirPathAssetsImg, element)).isFile()) {
+        if (fs.lstatSync(path.join(dirPathAssetsImg, element)).isFile()){         
             fs.copyFile(path.join(dirPathAssetsImg, element), path.join(to, element), err => {
                 if(err) throw err; // не удалось скопировать файл
                 console.log('Файл успешно скопирован');
